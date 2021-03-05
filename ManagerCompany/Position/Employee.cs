@@ -2,7 +2,7 @@
 
 namespace ManageCompany
 {
-    public class Employee
+    public abstract class Employee
     {
         public int Id { get; set; }
         public string FirstName { get; set; }
@@ -20,27 +20,8 @@ namespace ManageCompany
             FirstName = name;
             SecondName = surname;
             Position = position;
-
-            if (position == Position.Executive)
-            {
-                Salary = DataSalary.executivesRate;
-            }
-
-            else if (position == Position.HourlyEmployee)
-            {
-                Salary = DataSalary.hourlyRate;
-            }
-
-            else if (position == Position.Manager)
-            {
-                Salary = DataSalary.managerdRate;
-            }
-
-            else if (position == Position.SalariedEmployee)
-            {
-                Salary = DataSalary.salariedRate;
-            }
         }
 
+        public abstract void SendCV(string text);
     }
 }

@@ -10,9 +10,13 @@ namespace ManageCompany
         private static float raiseRate;
 
         public Executive()
-        { }
+        { 
+
+        }
+
         public Executive(int id, string name, string surname, Position position) : base(id, name, surname, position)
-        { }
+        { 
+        }
 
         public static float SalaryExecutive()
         {

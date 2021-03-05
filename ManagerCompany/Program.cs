@@ -1,4 +1,6 @@
-﻿namespace ManageCompany
+﻿using SalesApp.EmployeeManagement;
+
+namespace ManageCompany
 {
     class Program
     {
@@ -6,6 +8,17 @@
         {
             EmployeeOfCompany.AddCurrentEmployee();
             ManagmentApp.RunApplication();
+
+
+
+            var compMan = new CompanyManager();
+
+            compMan.Hire(new Executive { });
+            compMan.Hire(new Executive { });
+
+
+
+            if()
         }
     }
 }

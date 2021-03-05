@@ -6,7 +6,9 @@ namespace ManageCompany
     {
         public static void CalculationSalaryEmpl()
         {
-            ManagmentApp.ShowMessage("Choise ID employees do you calculation salary");
+            var manager = new ManagmentApp();
+
+            manager.ShowMessage("Choise ID employees do you calculation salary");
             int id = InputVerificationID.NoEmployeeWithId();
 
             var employee = Employee.EmployeeList.SingleOrDefault(r => r.Id == id);

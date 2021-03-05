@@ -2,10 +2,10 @@
 
 namespace ManageCompany
 {
-    class ManagmentApp
+    public class ManagmentApp
     {
-        private static bool RequestedExit;
-        public static void RunApplication()
+        private bool RequestedExit;
+        public void RunApplication()
         {
             while (!RequestedExit)
             {
@@ -14,7 +14,7 @@ namespace ManageCompany
             }
         }
 
-        private static void WaitForCommand()
+        private void WaitForCommand()
         {
             int command;
 
@@ -26,7 +26,7 @@ namespace ManageCompany
             ApplyCommand(command);
         }
 
-        public static void ApplyCommand(int command)
+        public void ApplyCommand(int command)
         {
             switch ((Menu)command)
             {
@@ -60,14 +60,15 @@ namespace ManageCompany
             }
         }
 
-        static void ClearDisplay()
+        private void ClearDisplay()
         {
             Console.Clear();
         }
 
-        public static void ShowCommands()
+        public void ShowCommands()
         {
             ShowMessage("\nSELECT ONE OF THE COMMANDS!!!\n");
+
             ShowMessage(
                         $"1 - Current employees of the company.",
                         $"2 - Shows the id and positions of the current employees of the company.",
@@ -80,23 +81,27 @@ namespace ManageCompany
                         $"9 - Exit the application.");
         }
 
-        public static void ShowMessage(params string[] msgs)
+        public void ShowMessage(params string[] msgs)
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
+
             foreach (var msg in msgs)
             {
                 Console.WriteLine(msg);
             }
+
             Console.ForegroundColor = ConsoleColor.White;
         }
 
-        public static void ShowErrorRed(params string[] msgs)
+        public void ShowErrorRed(params string[] msgs)
         {
             Console.ForegroundColor = ConsoleColor.Red;
+
             foreach (var msg in msgs)
             {
                 Console.WriteLine(msg);
             }
+
             Console.ForegroundColor = ConsoleColor.White;
         }
     }
