@@ -8,17 +8,6 @@ namespace ManageCompany
         {
             EmployeeOfCompany.AddCurrentEmployee();
             ManagmentApp.RunApplication();
-
-
-
-            var compMan = new CompanyManager();
-
-            compMan.Hire(new Executive { });
-            compMan.Hire(new Executive { });
-
-
-
-            if()
         }
     }
 }
