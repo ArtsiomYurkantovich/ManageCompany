@@ -2,22 +2,22 @@
 
 namespace ManageCompany
 {
-    class Manager : Employee
+    public class Manager : Employee
     {
-        private static float bonus;
-        public static float salaryManager;
-
+        private float bonus;
+        public float salaryManager;
+        public Manager() { }
         public Manager(int id, string name, string surname, Position position) : base(id, name, surname, position)
         { }
 
-        public static float SalaryManager()
+        public float SalaryManager()
         {
             PaymentBonus();
             salaryManager = DataSalary.managerdRate + bonus;
             return salaryManager;
         }
 
-        public static float PaymentBonus()
+        public float PaymentBonus()
         {
             int amountOfSales;
             ManagmentApp.ShowMessage($"Enter please amount of sales in this month:");

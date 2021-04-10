@@ -1,5 +1,4 @@
-﻿
-namespace ManageCompany
+﻿namespace ManageCompany
 {
     public enum Menu
     {
@@ -10,7 +9,6 @@ namespace ManageCompany
         RaseRateEmployee,
         CalculateSalaryBonus,
         Clear,
-        Info,
         Exit
     }
 }

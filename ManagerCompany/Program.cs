@@ -1,13 +1,12 @@
-﻿using SalesApp.EmployeeManagement;
-
-namespace ManageCompany
+﻿namespace ManageCompany
 {
     class Program
     {
         static void Main(string[] args)
         {
             EmployeeOfCompany.AddCurrentEmployee();
-            ManagmentApp.RunApplication();
+            ManagmentApp manApp = new ManagmentApp();
+            manApp.RunApplication();
         }
     }
 }

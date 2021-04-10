@@ -43,16 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EmployeeManagement\CalculationSalaryEmployee.cs" />
-    <Compile Include="EmployeeManagement\CompanyManager.cs" />
-    <Compile Include="EmployeeManagement\DismissEmployee.cs" />
     <Compile Include="EmployeeManagement\DataSalary.cs" />
-    <Compile Include="EmployeeManagement\ShowEmployee.cs" />
+    <Compile Include="EmployeeManagement\ManagmentEmployee.cs" />
     <Compile Include="CompanyEmployees\EmployeeOfCompany.cs" />
     <Compile Include="AdditionalData\MenuEnum.cs" />
     <Compile Include="Position\Employee.cs" />
-    <Compile Include="EmployeeManagement\HireNewEmployee.cs" />
-    <Compile Include="EmployeeManagement\InputVerificationID.cs" />
     <Compile Include="Position\Executive.cs" />
     <Compile Include="Position\HourlyEmployee.cs" />
     <Compile Include="Position\Manager.cs" />
@@ -60,7 +55,6 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Position\SalariedEmployee.cs" />
-    <Compile Include="EmployeeManagement\RasePositionEmployee.cs" />
     <Compile Include="AdditionalData\TypeEmployeeEnum.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -4,13 +4,13 @@ namespace ManageCompany
 {
     public class HourlyEmployee : Employee
     {
-        private static int hWorked;
-        private static float salaryHourlyEmployee;
-        
+        private int hWorked;
+        private float salaryHourlyEmployee;
+        public HourlyEmployee() { }
         public HourlyEmployee(int id, string name, string surname, Position position) : base(id, name, surname, position)
         { }
 
-        public static float SalaryHourlyEmployee()
+        public float SalaryHourlyEmployee()
         {
             EnterHourWorked();
 
@@ -24,7 +24,7 @@ namespace ManageCompany
             return salaryHourlyEmployee;
         }
 
-        private static void EnterHourWorked()
+        private void EnterHourWorked()
         {
             ManagmentApp.ShowMessage("Enter how many hours worked per month: ");
             while (!int.TryParse(Console.ReadLine(), out hWorked))

@@ -28,31 +28,29 @@ namespace ManageCompany
 
         public void ApplyCommand(int command)
         {
+            ManagmentEmployee manEmpl = new ManagmentEmployee();
             switch ((Menu)command)
             {
                 case Menu.ShowCompany:
-                    ShowEmployee.ShowDisplayEmployee();
+                    manEmpl.ShowDisplayEmployee();
                     break;
                 case Menu.ShowIdPositionCompany:
-                    ShowEmployee.ShowIdPositionCompany();
+                    manEmpl.ShowIdPositionCompany();
                     break;
                 case Menu.AddEmployee:
-                    HireNewEmployee.AddNewListEmployee();
+                    manEmpl.AddNewListEmployee();
                     break;
                 case Menu.DismissalEmployee:
-                    DismissEmployee.RemoveFromList();
+                    manEmpl.RemoveFromList();
                     break;
                 case Menu.RaseRateEmployee:
-                    RasePositionEmployee.RasePosition();
+                    manEmpl.RasePosition();
                     break;
                 case Menu.CalculateSalaryBonus:
-                    CalculationSalaryEmployee.CalculationSalaryEmpl();
+                    manEmpl.CalculationSalaryEmpl();
                     break;
                 case Menu.Clear:
-                    ClearDisplay();
-                    break;
-                case Menu.Info:
-                    ShowCommands();
+                    Console.Clear();
                     break;
                 case Menu.Exit:
                     RequestedExit = true;
@@ -60,15 +58,9 @@ namespace ManageCompany
             }
         }
 
-        private void ClearDisplay()
-        {
-            Console.Clear();
-        }
-
         public void ShowCommands()
         {
             ShowMessage("\nSELECT ONE OF THE COMMANDS!!!\n");
-
             ShowMessage(
                         $"1 - Current employees of the company.",
                         $"2 - Shows the id and positions of the current employees of the company.",
@@ -76,32 +68,27 @@ namespace ManageCompany
                         $"4 - Dismiss an employee from the company.",
                         $"5 - Promotion of a company employee.",
                         $"6 - Calculation of the salary of the current employee",
-                        $"7 - Clear console content.",
-                        $"8 - Show list of commands.",
-                        $"9 - Exit the application.");
+                        $"7 - Clear display.",
+                        $"8 - Exit the application.");
         }
 
-        public void ShowMessage(params string[] msgs)
+        public static void ShowMessage(params string[] msgs)
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
-
             foreach (var msg in msgs)
             {
                 Console.WriteLine(msg);
             }
-
             Console.ForegroundColor = ConsoleColor.White;
         }
 
-        public void ShowErrorRed(params string[] msgs)
+        public static void ShowErrorRed(params string[] msgs)
         {
             Console.ForegroundColor = ConsoleColor.Red;
-
             foreach (var msg in msgs)
             {
                 Console.WriteLine(msg);
             }
-
             Console.ForegroundColor = ConsoleColor.White;
         }
     }
